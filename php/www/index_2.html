@@ -1,0 +1,105 @@
+<html>
+<head>
+ <script>
+    var navedeno = 0;
+ function counter (x) {
+
+  navedeno++;
+  x.innerHTML = "На этот текст вы навели " + navedeno + " раз."
+  
+ }
+ </script>
+ <Title>Изучаю JavaScript</Title>
+ <link rel="stylesheet" href="format2.css" type="text/css">
+ <script>
+ function Buttonclick (butoon){
+  confirm("Вы проиграли");
+  
+ }
+ </script>
+<meta charset="utf-8"> 
+ </head>
+<body>
+    <div id="menu">
+              	<ul>
+		<li><a href="index.html" >home</a></li>
+		<li><a href="index2.html">about us</a></li>
+		<li><a href="index_2.html" class="current">services</a></li>
+		<li><a href="index3.html">solutions</a></li>
+		<li><a href="index4.html">contact us</a></li>								
+	</ul>
+              </div>
+ <style>.pred{
+ text-align: center;
+ color: red;
+}
+.igra{
+ margin-top:  50px;
+ margin-left: 300px;
+ margin-bottom: 60px;
+ margin-right: 50px;
+}</style>
+ <div class='osnova'>
+   <ul class="vert_menu">
+
+    <a href="index.html"><li class="vert_menu_item">Первый сайт</li></a>
+<a href="index_2.html">    <li class="vert_menu_item">Второй сайт</li></a>
+        <a href="index3.html"><li class="vert_menu_item">Третий сайт</li></a>
+ </ul>
+ <div class="content">
+<span onmousemove="counter(this)">На этот текст вы навели 0 раз</span>
+  </div>
+ <div class="pred">Не нажимай на кнопку</div>
+<input type="button" name="b" value="do not click me" class="igra" onclick="Buttonclick(this)" size="20px"/>
+ <br />
+ <script>
+ 
+ var arr = new Array("str",23,1.2,false)
+ //document.write(arr[0] + '<br>' + arr[3])
+for(var i = 0; i< arr.length ; i++)
+ document.write(arr[i] + "<br />");
+  var asd = new Array();
+  for(i= 0; i < 20; i++){
+   asd[i] = i * 9;
+    document.write(asd[i] + "<br />");
+  }
+  var summ = 0;
+  for(i = 0;i < asd.length; i++)
+   summ += asd[i];
+   document.write("Сумма равна - " + (summ) +"<br />");
+     document.write("Среднкее арифметическое равно - "+ (summ/arr.length));
+   
+  
+ </script>
+ <script>
+  var summa;
+
+  function tixt (text){
+   document.write("<br />" + text )
+  }
+ function kek (x,y){
+summa = x + y;
+  
+ }
+
+     kek (25, 8);
+  tixt("Heloo");
+  tixt(summa);
+  
+  var es = 12;
+var i = 10;
+  function test (){
+   es++;
+   var i = 5
+  }
+  test();
+  document.write(es +"global" +", vars" + i)
+  
+  
+  
+ </script>
+  
+ </div>
+
+ </body>
+</html>

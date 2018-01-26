@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+    <br /><br/><br/>
+    <p id = "zag1"> </p>
+    <input type="text" id="UsOtv1" name="UsOtv1">
+    <p id = "zag2"> </p>
+    <input type="text" id="UsOtv2" name="UsOtv2">
+    <p id = "zag3"> </p>
+    <input type="text" id="UsOtv3" name="UsOtv3">
+    <p id = "zag4"> </p>
+    <input type="text" id="UsOtv4" name="UsOtv4"><br /><br />
+ <input type="submit" onclick="ansverVopros()" />
+    
+    <p id="kolvoBalov"> </p>
+    <script>
+    
+ zagadka1 = "Висит груша нельзя скушать. Что это?" ;
+ zagadka2 = "Зимой и летом одним цветом. Что это?";
+ zagadka3 = "Зимой белый летом серый. Что это?";
+ zagadka4 = "100 одежек и все без застежек. Что это?";
+    document.getElementById("zag1").innerHTML = zagadka1;
+    document.getElementById("zag2").innerHTML = zagadka2;
+    document.getElementById("zag3").innerHTML = zagadka3;
+    document.getElementById("zag4").innerHTML = zagadka4;
+ 
+function ansverVopros(){
+     var ball = 0;
+   var UserOtvet = document.getElementById("UsOtv1").value.toLowerCase()
+ if(UserOtvet == "лампа" ||UserOtvet == "лампочка" ) {ball++}
+      UserOtvet = document.getElementById("UsOtv2").value.toLowerCase()
+ if(UserOtvet == "ёлка" ||UserOtvet == "елка"|| UserOtvet == "ель") {ball++}
+      UserOtvet = document.getElementById("UsOtv3").value.toLowerCase()
+ if(UserOtvet == "заяц"|| UserOtvet == "кролик") {ball++}
+     UserOtvet = document.getElementById("UsOtv4").value.toLowerCase()
+ if(UserOtvet == "капуста") {ball++}
+    document.getElementById("kolvoBalov").innerHTML = "Вы угадали "+ball+"/4"
+    for(var i = 1;i <= 4;i++){
+          document.getElementById('"UsOtv" + i').value = "";
+    }
+}
+      
+</script>
+</body>
+</html>

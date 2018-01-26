@@ -1,0 +1,110 @@
+*{
+	margin:0;
+	padding:0;
+}
+	#menu{
+		background:#fff;
+		width:176px;
+		border:1px solid #cccccc;
+		padding:3px;
+		margin:15px 0 0 15px;
+	}
+		#menu ul{
+			list-style:none;
+		}
+			#menu li{
+				list-style:none;
+				display:block;
+				border-bottom:1px solid #ffce88;
+			}
+				#menu li a{
+					list-style:none;
+					display:block;
+					background:#fbd346 url(images/menu_006_bg.jpg) repeat-y left;
+					color:#fff;
+					text-transform:uppercase;
+					font-size:11px;
+					text-decoration:none;
+					padding:5px 5px 10px 15px;
+				}
+					#menu li a:hover{
+						background:#f7941d url(images/menu_006_h.jpg) repeat-x top;
+						color:#fff;
+						text-decoration:none;
+					}
+				#menu li .current{
+					list-style:none;
+					display:block;
+					background:#f7941d url(images/menu_006_h.jpg) repeat-x top;
+					color:#fff;
+					text-transform:uppercase;
+					font-size:11px;
+					text-decoration:none;
+					padding:5px 5px 10px 15px;
+				}
+					#menu li a.current, #menu li a:hover.current{
+						background:#f7941d url(images/menu_006_h.jpg) repeat-x top;
+						color:#fff;
+						text-decoration:none;					
+					}
+
+
+
+/*
+
+.vert_menu 
+{
+background-color: #99958C; 
+ float: left;
+ width:100px ;
+ margin: 0px;
+ padding-left: 0px;
+}
+
+.vert_menu_item
+{
+background: #fff;
+ float: left;
+border: 1px solid #000000; 
+display: block;
+ padding: 10px;
+ margin: 0px;
+}
+a{
+    border-left: 2px solid #a9a9a9; 
+    color:#000;
+    background: #fff;
+}
+a:hover{
+     color:#f3f3f3;
+background: #646464;}
+a:active {
+    color:#f3f3f3;
+background: #555;
+}
+*/
+
+.forma
+{
+ text-align: center;
+ 
+}
+.fail
+{
+ color: red;
+ padding: 10px;
+ margin: 10px;
+border: 0px; 
+}
+.taimer{
+ color: black;
+ background: red ;
+ width: 100px;
+ float: right;
+ text-decoration: overline;
+ text-decoration-style: solid;
+ border: 5px solid blue;
+font-style: italic;
+ font-family: fantasy;
+ font-kerning: normal;
+}

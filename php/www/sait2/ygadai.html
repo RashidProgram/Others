@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Угадай число</title>
+</head>
+<body>
+    <div style = "bacground-color:#000;color:red;">Приветствую вас в игре "Угадай число". Вы должны выбрать уровень сложности. В свободной игре у вас бесконечное кол-во попыток.<br /> Информация о уровнях появится при нажатии на кнопку. Возможно в игре будут баги но те которыые я нашел я пофиксил. Код смотреть можно).</div>
+    <!-- собственно кнопки и их функции -->
+    <button onclick="svobodnaya(0)">Свободная игра</button>
+    <button onclick="ochenlegko(0,16)">Очень легкий уровень</button>
+    <button onclick="legko(0,13)">Легкий уровень</button>
+    <button onclick="sredne(0,11)">Средний уровень</button>
+    <button onclick="slojno(0,8)">Сложный уровень</button>
+    <button onclick="ekstremal(0,6)">Уровень для экстремалов</button>
+    
+    <script>
+        //attempt - это переменная которая считает ваши попытки
+       /* popitki - это переменная в которой содержится
+        максимальное кол-во попыток */
+        //Бот загадывает случайное число от 1 до 100
+    var answer = parseInt(Math.random() * 100);
+        //Свободная игра
+    function svobodnaya(attempt){
+        while(true){
+    var otvet = prompt('Бот загадал число от 1 до 100 отгадайте его если хотите выйти из игры введите "Хочу выйти" или ключевое слово "stop"');
+            otvet = otvet.toLowerCase();
+          if(otvet == "хочу выйти"|| otvet == 'stop') {
+          alert("Вы вышли из игры");
+          break;
+      }
+    otvet = parseInt(otvet);
+     
+        if(otvet < answer){
+            alert("Загаданое число больше вашего");
+            attempt++;}
+            else if(otvet > answer){
+            alert("Загаданое число меньше вашего");
+            attempt++;}
+                 else if(otvet == answer){
+            attempt++;
+                     if((attempt<=10) && (attempt > 7)){
+                      alert("Вы угадали число за "+ attempt+" попыток. Это хороший результат!");
+                     break;}
+    else if((attempt > 10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if((attempt>10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if(attempt <= 7){
+              alert("Вы угадали число за "+ attempt+" попыток. Это отличный результат!!!");
+            break;
+        }
+        else{
+              alert("Вы угадали число за "+ attempt+" попыток. Думаю вам надо еще потренироваться");
+            break;
+        }}
+        else{
+            alert("Вы ввели не число");
+        }}}
+        //Легкий уровень
+        function legko(attempt, popitki){
+            alert("Вы выбрали легкий уровень. Ваша цель угадать число за 13 попыток")
+        while(true){
+    var otvet = prompt('Бот загадал число от 1 до 100 отгадайте его если хотите выйти из игры введите "Хочу выйти" или ключевое слово "stop"');
+            otvet = otvet.toLowerCase();
+          if(otvet == "хочу выйти" ||otvet == "stop") {
+          alert("Вы вышли из игры");
+          break;
+      }
+    otvet = parseInt(otvet);
+     
+        if(otvet < answer){attempt++;
+            alert("Загаданое число больше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+            }
+            else if(otvet > answer){attempt++;
+            alert("Загаданое число меньше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+            }
+                 else if(otvet == answer){
+            attempt++;
+                     if((attempt<=10) && (attempt > 7)){
+                      alert("Вы угадали число за "+ attempt+" попыток. Это хороший результат!");
+                     break;}
+    else if((attempt > 10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if(attempt <= 7){
+              alert("Вы угадали число за "+ attempt+" попыток. Это отличный результат!!!");
+            break;
+        }
+        else{
+              alert("Вы угадали число за "+ attempt+" попыток. Думаю вам надо еще потренироваться");
+            break;
+        }}
+        else{attempt++;
+            alert("Вы ввели не число. У вас осталось "+(popitki - attempt)+" попыток");
+        }
+          if(attempt == 13){
+        alert("Вы не успели одгадать число за "+attempt+"попыток правильный ответ был "+answer);
+          break;}}}
+          //Очень легкий уровень 
+       function ochenlegko(attempt,popitki){
+           alert("Вы выбрали очень легкий уровень. Вы должны угадать число за 16 попыток")
+        while(true){
+    var otvet = prompt('Бот загадал число от 1 до 100 отгадайте его если хотите выйти из игры введите "Хочу выйти" или ключевое слово "stop"');
+            otvet = otvet.toLowerCase();
+          if(otvet == "хочу выйти" || otvet == "stop") {
+          alert("Вы вышли из игры");
+          break;
+      }
+    otvet = parseInt(otvet);
+            
+        if(otvet < answer){
+            attempt++;
+            alert("Загаданое число больше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+            }
+            else if(otvet > answer){
+             attempt++;
+                alert("Загаданое число меньше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+           }
+                 else if(otvet == answer){
+            attempt++;
+                     if((attempt<=10) && (attempt > 7)){
+                      alert("Вы угадали число за "+ attempt+" попыток. Это хороший результат!");
+                     break;}
+    else if((attempt > 10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if((attempt>10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if(attempt <= 7){
+              alert("Вы угадали число за "+ attempt+" попыток. Это отличный результат!!!");
+            break;
+        }
+        else{
+              alert("Вы угадали число за "+ attempt+" попыток. Думаю вам надо еще потренироваться");
+            break;
+        }}
+        else{
+           attempt++;
+            alert("Вы ввели не число. У вас осталось "+(popitki - attempt)+" попыток");
+        }
+        if(attempt == 16){
+        alert("Вы не успели одгадать число за "+attempt+" попыток правильный ответ был "+answer);
+        break;}}}
+        //Средний уровень 
+        function sredne(attempt,popitki){
+           alert("Вы выбрали средний уровень. Вы должны угадать число за 11 попыток")
+        while(true){
+    var otvet = prompt('Бот загадал число от 1 до 100 отгадайте его если хотите выйти из игры введите "Хочу выйти" или ключевое слово "stop"');
+            otvet = otvet.toLowerCase();
+          if(otvet == "хочу выйти" || otvet == "stop") {
+          alert("Вы вышли из игры");
+          break;
+      }
+    otvet = parseInt(otvet);
+            
+        if(otvet < answer){
+            attempt++;
+            alert("Загаданое число больше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+            }
+            else if(otvet > answer){
+             attempt++;
+                alert("Загаданое число меньше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+           }
+                 else if(otvet == answer){
+            attempt++;
+                     if((attempt<=10) && (attempt > 7)){
+                      alert("Вы угадали число за "+ attempt+" попыток. Это хороший результат!");
+                     break;}
+    else if((attempt > 10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if((attempt>10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if(attempt <= 7){
+              alert("Вы угадали число за "+ attempt+" попыток. Это отличный результат!!!");
+            break;
+        }
+        else{
+              alert("Вы угадали число за "+ attempt+" попыток. Думаю вам надо еще потренироваться");
+            break;
+        }}
+        else{
+           attempt++;
+            alert("Вы ввели не число. У вас осталось "+(popitki - attempt)+" попыток");
+        }
+        if(attempt == 11){
+        alert("Вы не успели одгадать число за "+attempt+" попыток правильный ответ был "+answer);
+        break;}}}
+      //Сложный уровень
+        function slojno(attempt,popitki){
+           alert("Вы выбрали сложный уровень. Вы должны угадать число за 8 попыток")
+        while(true){
+    var otvet = prompt('Бот загадал число от 1 до 100 отгадайте его если хотите выйти из игры введите "Хочу выйти" или ключевое слово "stop"');
+            otvet = otvet.toLowerCase();
+          if(otvet == "хочу выйти" || otvet == "stop") {
+          alert("Вы вышли из игры");
+          break;
+      }
+    otvet = parseInt(otvet);
+            
+        if(otvet < answer){
+            attempt++;
+            alert("Загаданое число больше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+            }
+            else if(otvet > answer){
+             attempt++;
+                alert("Загаданое число меньше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+           }
+                 else if(otvet == answer){
+            attempt++;
+                     if((attempt<=10) && (attempt > 7)){
+                      alert("Вы угадали число за "+ attempt+" попыток. Это хороший результат!");
+                     break;}
+    else if((attempt > 10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if((attempt>10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if(attempt <= 7){
+              alert("Вы угадали число за "+ attempt+" попыток. Это отличный результат!!!");
+            break;
+        }
+        else{
+              alert("Вы угадали число за "+ attempt+" попыток. Думаю вам надо еще потренироваться");
+            break;
+        }}
+        else{
+           attempt++;
+            alert("Вы ввели не число. У вас осталось "+(popitki - attempt)+" попыток");
+        }
+        if(attempt == 8){
+        alert("Вы не успели одгадать число за "+attempt+" попыток. правильный ответ был "+answer);
+        break;}}}
+         //Уровень для экстремалов
+        function ekstremal(attempt,popitki){
+           alert("Вы выбрали сложный уровень. Вы должны угадать число за 6 попыток")
+        while(true){
+    var otvet = prompt('Бот загадал число от 1 до 100 отгадайте его если хотите выйти из игры введите "Хочу выйти" или ключевое слово "stop"');
+            otvet = otvet.toLowerCase();
+          if(otvet == "хочу выйти" || otvet == "stop") {
+          alert("Вы вышли из игры");
+          break;
+      }
+    otvet = parseInt(otvet);
+            
+        if(otvet < answer){
+            attempt++;
+            alert("Загаданое число больше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+            }
+            else if(otvet > answer){
+             attempt++;
+                alert("Загаданое число меньше вашего. У вас осталось "+(popitki - attempt)+" попыток");
+           }
+                 else if(otvet == answer){
+            attempt++;
+                     if((attempt<=10) && (attempt > 7)){
+                      alert("Вы угадали число за "+ attempt+" попыток. Это хороший результат!");
+                     break;}
+    else if((attempt > 10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if((attempt>10)&& (attempt < 20)){
+        alert("Вы угадали число за "+ attempt+" попыток. Это нормальный результат.");
+        break;}
+        else if(attempt <= 7){
+              alert("Вы угадали число за "+ attempt+" попыток. Это отличный результат!!!");
+            break;
+        }
+        else{
+              alert("Вы угадали число за "+ attempt+" попыток. Думаю вам надо еще потренироваться");
+            break;
+        }}
+        else{
+           attempt++;
+            alert("Вы ввели не число. У вас осталось "+(popitki - attempt)+" попыток");
+        }
+        if(attempt == 6){
+        alert("Вы не успели одгадать число за "+attempt+" попыток. правильный ответ был "+answer);
+        break;}}}
+    </script>
+    <footer>
+    <div style="position:absolute; weight:10px;">Copyright&copy; RashidProgram "2017"</div>
+    </footer>
+</body>
+</html>

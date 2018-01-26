@@ -1,0 +1,24 @@
+body, html{
+  margin: 0px;
+  padding:0px;
+ min-width: 500px;
+  min-height: 400px;
+height: auto;
+  width: ;
+  color: #000000;
+    background: url(../Images/Phon.jpg);
+    background-size:cover;
+  background-repeat: no-repeat;
+} 
+
+.noscript{
+  display: none;
+}
+p {
+        text-indent: -40px;
+        padding-left: 40px;
+      }
+.logoDiv{
+  height: 52px;
+  width: 101px;
+}

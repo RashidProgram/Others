@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script src="Scripts/jquery.js"></script>
+  <style>#okoSpan,#okoImg{height:10px ;width: 10px;}</style>
+	<meta charset="UTF-8">
+	<title>Скейтбордимты - Махачкала</title>
+
+</head>
+<body>
+	<h1>Вход на сайт</h1>
+	<form action="\cgi-bin\autorise.py">
+		<input class="autoriseInput" type="text" name="userMail" placeholder="Введите mail" /><br />
+		<input class="autoriseInput" type="password" id = "userPass" name="userPass" placeholder="Введите пароль" /><span class='okoSpan' onclick="clickOko()"><img src="images/okoClose.png" id="okoImg"/></span><br /><br />
+		<input type="submit" name="autorise" value="Войти">
+	</form>
+	<a href="registr.html">У меня нет аккаунта</a>
+  <script src="Scripts/main.js"></script>
+
+</body>
+</html>
