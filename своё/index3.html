@@ -1,0 +1,122 @@
+<html>
+<head>
+ <title>Изучаю JavaScript и jQuery</title>
+ <meta charset="utf-8" />
+ <link rel="stylesheet" href="format2.css" type="text/css">
+  <script type="text/javascript" src="jquery.js"></script>
+    <script>
+    var z ;
+ function obrab (form){
+
+  var name = document.forma.a.value;
+ var fail = false
+
+ var pass = document.forma.pass.value;
+  if(name == "" )
+fail = true;
+  else 
+  fail = false;
+
+  
+  
+  if(fail == true){
+   document.getElementById('fail').innerHTML = "Вы не ввели имя"
+return false;
+ }
+  else
+   document.getElementById('fail').innerHTML = "Проверка оконченна"
+ }
+ </script>
+ </head>
+<body>
+
+
+  <div id="menu">
+              	<ul>
+		<li><a href="index.html">home</a></li>
+		<li><a href="index2.html">about us</a></li>
+		<li><a href="index_2.html">services</a></li>
+		<li><a href="index3.html" class="current">solutions</a></li>
+		<li><a href="index4.html">contact us</a></li>								
+	</ul>
+              </div>
+<!-- 
+  <form class="forma" id="forma" name="forma" action="" method="" > 
+   <label for="a">Введите имя</label><input type="text" name="a" placeholder="Имя"  id="a"  /> <span class="fail" name="fail" id="fail"> </span><br /><br />
+<label for="pass">Введите пароль (не больше 12 символов)</label> <input name="pass" id='formx'type="password" placeholder="Введите пароль" title='Введите' maxlength="12"/><br /><br />
+<label for="pass">Повторите пароль</label> <input name="pass2" id='pass'type="password" placeholder="Введите пароль" title='Введите' maxlength="12"/><br /><br />
+ <label for="a">Введите имя</label><input type="text" name="a" placeholder="Имя"  id="a" /><br /><br />
+   <span>Пол</span><br /><br />
+    <label for="jan">Женский</label><input type="radio" name="jan" placeholder="Женский"  id="jan" /><br />
+      <label for="myj">Мужской</label><input type="radio" name="myj" placeholder="Мужской"  id="myj" /><br /><br />
+   <input type="button" onclick="obrab(document.getElementById('forma'))" name="submit" value="Готово" /><br /><br />
+     </form>
+ -->
+ 
+
+
+ <script>
+ var id = setInterval("myfunk()", 1000);
+ var sekond = 0 ;
+  var min = 0;
+  var cas = 0;
+  var tensekond = 0;
+  var tenmin = 0;
+  var tencas = 0;
+  function myfunk(){
+   sekond++;
+   document.getElementById('sekund').innerHTML = sekond
+   document.getElementById('min').innerHTML = min
+   document.getElementById('cas').innerHTML = cas
+    document.getElementById('tencas').innerHTML = tencas
+  document.getElementById('tenmin').innerHTML = tenmin
+   document.getElementById('tensekond').innerHTML = tensekond
+  if(sekond == 9){
+   tensekond++;
+   sekond = -1;
+  }
+   if(tensekond == 6){
+  tensekond = 0;
+    sekond= -1;
+   min++;
+  }
+   if(min ==10){
+    min = 0;
+    tenmin++;
+   }
+   if(tenmin ==6){
+    tenmin = 0;
+    cas ++;
+   }
+  }
+
+   
+ </script>
+    <style>body{ }</style>
+ <div id="test" onclick="$('#test').hide()">Нажми чтоб этот текст исчез</div>
+ <p class="test" >Этот текст синий</p>
+ <p class="test2" >Этот краный </p>
+ <div class="test">Этот зеленый</div><br />
+ <div class="test2">И все это без использованния CSS</div>
+ <script>
+     (function($,undefined){
+         
+         
+    $(document).ready(function(){
+     $("p.test").css("color", "blue");
+     $("div.test").css("color", "green");
+     $("p.test2").css("color", "red");
+     $(".test, div.test").css("background-color", "red");
+     $(".test, .test2").css("width", "90px");})}
+     
+     
+     
+     
+     )(jQuery)
+    </script>
+ 
+ <div class="taimer"> Вы на сайте <span id="tencas">0</span><span id="cas">0</span>:<span id="tenmin">0</span><span id="min">0</span>:<span id="tensekond">0</span><span id="sekund">0</span>
+ </div>
+   
+ </body> 
+</html>

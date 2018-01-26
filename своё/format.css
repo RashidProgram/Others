@@ -1,0 +1,73 @@
+
+body
+{
+    background: white;
+  font-size: 100% ;
+  font-family: arial , helvetica , sans-serif ;
+}
+
+
+
+
+.head_part
+{
+    clear: both;
+}
+
+.Privetstvie
+{
+ float: none;
+ font-size: 20px;
+ font-family: cursive;
+ font-style: italic;
+ color: black;
+ margin: 15px 10px 10px 10px;
+}
+.logo
+{
+ float: left;
+}
+
+
+
+.slogon
+{
+float: right;
+  margin-top: 50px;
+  margin-right: 10px;
+  width: 400px;
+}
+.middle
+{
+clear: both;  
+ padding: 50px; 
+}
+
+.content
+{
+margin-left: 180px;
+  background-color: aqua;
+  
+}
+
+.hlmenu_menu_item
+{
+font-size: 110%;
+  font-weight: bold;
+  padding: 3px 5px 3px 5px;
+ margin-left: 30px;
+}
+.copyright_line
+{
+  text-align: center;
+background-color: gray;
+}
+.X {
+ background-color: grey;
+}
+.kalkulator
+{
+ font-family: fantasy;
+ font-size: 20px;
+ text-align: center;
+}
