@@ -7,7 +7,7 @@
          <div style="width: 1100px; margin: 0 auto">
         <hr>
         <h2>
-            Это будет отдельная страница с открытым магзином
+            Товары
         </h2>
 
         <div style="width: 1100px; margin: 0 auto">
@@ -15,61 +15,24 @@
                 Каталог товаров
             </h1>
             <div id ='shop'>
+                {% for tovar in tovars %}
+
                 <div class="shopUnit">
                     <img src="{% static 'images/shop/default.png' %}" />
 
                     <div class="shopUnitName">
-                        Название продукта
+                        {{ tovar.name }}
                     </div>
                     <div class="shopUnitShortDesc">
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
+                        {{ tovar.description|truncatewords:30 }}
                     </div>
                     <div class="shopUnitPrice">
-                        Цена: 0000 $
+                       {{ tovar.cost }}
                     </div>
-                    <a href="#" class="shopUnitMore">
+                    <a href="{% url 'shop:detail' {{ tovar.id }} %}" class="shopUnitMore">
                         Подробнее
                     </a>
-                </div>
-
-              <div class="shopUnit">
-                    <img src="{% static 'images/shop/default.png' %}" />
-
-                    <div class="shopUnitName">
-                        Название продукта
-                    </div>
-                    <div class="shopUnitShortDesc">
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                    </div>
-                  <div class="shopUnitPrice">
-                        Цена: 0000 $
-                    </div>
-                    <a href="#" class="shopUnitMore">
-
-                   Подробнее
-                    </a>
-                </div>
-
-                <div class="shopUnit">
-                    <img src="{% static 'images/shop/default.png' %}" />
-                    <div class="shopUnitName">
-                    Название продукта
-                </div>
-                <div class="shopUnitShortDesc">
-                    Здесь будет немного текста описывающего продукт.
-                      Здесь будет немного текста описывающего продукт.
-                      Здесь будет немного текста описывающего продукт.
-                </div>
-                <div class="shopUnitPrice">
-                        Цена: 0000 $
-                    </div>
-                    <a href="#" class="shopUnitMore">
-                        Подробнее
-                    </a>
+                {% endfor %}
                 </div>
             </div>
         </div>
